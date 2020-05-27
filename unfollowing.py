@@ -4,14 +4,14 @@ import json
 from instapy import InstaPy
 #Program 1 creates a JSON file consisting the list of all the followers of the given ig account. Reading the follower data into a variable.
 with open('Path of the Json file where followers list is stored') as json_file:
-    followers_data = json.load(json_file)
+    follower_data = json.load(json_file)
 
 #Program 1 also creates a JSON file consisting the list of all the followering list of the given ig account. Reading the following data into a variable.
-with open('Path of the Json file where followering list is stored') as json_file:
-    followering_data = json.load(json_file)
+with open('Path of the Json file where following list is stored') as json_file:
+    following_data = json.load(json_file)
 
 #Finds the ig account which we follow but does not follow us back.
-unfollowers_list = list(set(followering_data).difference(followering_data))
+unfollowers_list = list(set(following_data).difference(follower_data))
 
 
 #Logs in into your instagram
